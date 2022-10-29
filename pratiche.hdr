@@ -1,0 +1,10 @@
+
+create table pratiche (
+	id CHAR(5) NOT NULL,
+	mod CHAR(2),
+	descrizione VARCHAR(160),
+	luogo VARCHAR(40),
+	PRIMARY KEY (id)
+	);
+
+load data local infile "pratiche.dat" into table pratiche;

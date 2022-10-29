@@ -1,0 +1,7 @@
+create table links (
+	cliente INT NOT NULL,
+	pratica CHAR(5) NOT NULL,
+	KEY (cliente)
+	);
+
+load data local infile "links.dat" into table links;

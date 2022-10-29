@@ -1,0 +1,21 @@
+
+
+create table clienti (
+	id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+	cognome VARCHAR(40) NOT NULL, 
+	nome VARCHAR(40),
+	sesso CHAR(1),
+	data_nascita DATE,
+	paese_nascita VARCHAR(40),
+	prov_nascita CHAR(2),
+	paese_residenza VARCHAR(40),
+	prov_residenza CHAR(2),
+	indirizzo VARCHAR(80),
+	no_civico VARCHAR(10),
+	codice_fiscale CHAR(16),
+	telefono VARCHAR(40),
+	note VARCHAR(160),
+	INDEX name (cognome,nome)
+	);
+
+load data local infile "clienti.dat" into table clienti;
