@@ -2,7 +2,7 @@ VERSION= 1.1
 
 DATA = $(shell date +"%d/%m/%Y")
 
-OPT= -g -I/usr/include/mysql -DVERSION=\"$(VERSION)\" -DDATA=\"$(DATA)\"
+OPT= -g -I/usr/include/mysql -I/usr/include/mariadb -DVERSION=\"$(VERSION)\" -DDATA=\"$(DATA)\" $( mysql_config --cflags --libs )
 
 TARDIR=$(HOME)/share/public_html/src/archivio
 
